@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <dimen name="text_size_small">10px</dimen>
-    <dimen name="text_size_medium">18px</dimen>
-    <dimen name="text_size_large">26px</dimen>
-    <dimen name="rate_text_large">28sp</dimen>
-</resources>
