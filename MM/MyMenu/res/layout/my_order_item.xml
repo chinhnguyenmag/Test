@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!--
+         <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/Gray"
+        android:gravity="right"
+        android:tag="back" >
+
+        <Button
+            android:id="@+id/example_row_b_action_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_delete"
+            android:text="Delete" />
+    </LinearLayout>
+    -->
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#16191a"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:tag="front" >
+
+        <TextView
+            android:id="@+id/my_order_item_tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/Green" />
+
+        <RelativeLayout
+            android:id="@+id/my_order_item_ll_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_order_item_tv_status"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/my_order_item_ll_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center"
+                    android:text="@string/my_order_item_quantity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/White" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/my_order_item_bt_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_plus_order" />
+
+                    <TextView
+                        android:id="@+id/my_order_item_tv_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="2dp"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/White"
+                        android:width="30dp" />
+
+                    <ImageButton
+                        android:id="@+id/my_order_item_bt_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_minus_order" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_order_item_ll_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="right"
+                    android:text="$"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/White" />
+
+                <TextView
+                    android:id="@+id/my_order_item_tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/White" />
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/my_order_item_bt_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_star"
+                        android:onClick="onClick_Feedback"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/my_order_item_tv_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/my_order_item_ll_price"
+                android:layout_toRightOf="@id/my_order_item_ll_quantity"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/my_order_item_tv_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/White"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/my_order_item_et_comment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/my_order_item_tv_name"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_dashedline"
+                    android:ems="10"
+                    android:paddingRight="25dp"
+                    android:textColor="@color/White"
+                    android:visibility="gone" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/my_order_item_tv_comment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/my_order_item_tv_name"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_dashedline"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:paddingRight="25dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/White" >
+                </TextView>
+
+                <ImageButton
+                    android:id="@+id/my_order_bt_edit_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/my_order_item_tv_name"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_edit"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/my_order_bt_done_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/my_order_item_tv_name"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_done"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/my_order_item_ll_use_point"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_order_item_ll_info"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_use_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/activity_myorder_details_tv_use_points"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#de3e3e"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/my_order_item_cb_use_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/my_order_item_tv_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/White" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

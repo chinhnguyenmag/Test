@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/edittext_bg_indicator"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/dialog_save_profile_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dip" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dialog_profile_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/dialog_profile_title"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <Button 
+                android:id="@+id/dialog_profile_btClose"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:background="@android:drawable/ic_delete"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/Black" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/dialog_profile_lvProfile"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <Button
+        android:id="@+id/dialog_profile_btnAdd"
+        style="@style/button_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="10dp"
+        android:text="@string/dialog_profile_add"
+        android:textColor="@drawable/text_color_wr_selector" />
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/comment_bg_light"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/dialog_feedback_customer_ll_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/dialog_feedback_customer_tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/White"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/dialog_feedback_customer_rl_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dialog_feedback_customer_tv_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sdlfjkdf"
+                    android:textColor="@color/White" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dialog_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="Customer Feedback"
+            android:textColor="@color/White"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/comment_bg_dark"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <Button
+            android:id="@+id/dialog_feedback_customer_bt_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_submit"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Done"
+            android:textColor="@color/White"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/dialog_feedback_customer_lv_feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/dialog_feedback_customer_bt_done"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/dialog_feedback_customer_pb_loadmore"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_above="@id/dialog_feedback_customer_bt_done"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

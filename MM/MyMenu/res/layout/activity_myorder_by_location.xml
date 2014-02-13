@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/activity_myorder_by_location_layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#16191a"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/activity_myorder_by_location_layout_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/activity_myorder_by_location_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:contentDescription="@string/common_description"
+                    android:src="@drawable/ic_myorder_logo" />
+
+                <TextView
+                    android:id="@+id/activity_myorder_by_location_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/myorder_title"
+                    android:textColor="@color/White"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- Restaurant Status and Point -->
+
+            <LinearLayout
+                android:id="@+id/activity_myorder_by_location_shape"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/mypoint_shape"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/activity_myorder_by_location_tv_dinnerPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/White"
+                    android:textSize="12sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/activity_myorder_by_location_tv_dinnerStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/White"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Restaurnt information including address and logo -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@id/activity_myorder_by_location_shape"
+                android:layout_toRightOf="@id/activity_myorder_by_location_layout_icon"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/activity_myorder_by_location_restaurant_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/activity_myorder_by_location_tv_nameRestaurant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:textColor="@color/White"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/activity_myorder_by_location_tv_addressRestaurant"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/activity_myorder_by_location_tv_stateRestaurant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_myorder_by_location_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#16191a"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/activity_myorder_by_location_layout_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/sort_date"
+                    android:textColor="@color/White"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/activity_myorder_by_location_ib_sortdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_arrow_up" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_myorder_by_location_layout_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/sort_amount"
+                    android:textColor="@color/White"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/activity_myorder_by_location_ib_sortAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_arrow_down"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_myorder_by_location_layout3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dp" >
+
+            <ListView
+                android:id="@+id/activity_myorder_by_location_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg"
+                android:cacheColorHint="@color/bg"
+                android:divider="#4a4a4a"
+                android:dividerHeight="0.5dp"
+                android:padding="5dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:id="@+id/optionmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <com.magrabbit.intelligentmenu.customview.OptionMenu
+                android:id="@+id/optionMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

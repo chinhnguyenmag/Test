@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rate_text_large">40sp</dimen>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/listview_selector" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/myorder_chain_item_icon"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:id="@+id/myorder_chain_item_layout1"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/myorder_chain_item_icon"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/myorder_chain_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/myorder_chain_item_street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/myorder_chain_item_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myorder_chain_item_layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/myorder_chain_item_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- pressed -->
+    <item android:drawable="@drawable/bg_red_radius_color_selector" android:state_pressed="true"/>
+    <!-- focused -->
+    <item android:drawable="@drawable/bg_red_radius_color_selector" android:state_focused="true"/>
+    <!-- default -->
+    <item android:drawable="@drawable/bg_black_radius_color_selector"/>
+
+</selector>

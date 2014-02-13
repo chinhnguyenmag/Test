@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Common -->
+    <string name="app_name">MyMenu</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_settings_change_server">Change Server</string>
+    <string name="ok">OK</string>
+    <string name="or">or</string>
+    <string name="cancel">Cancel</string>
+    <string name="create">Create</string>
+    <string name="send">Send</string>
+    <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="submit">Submit</string>
+    <string name="share">Share</string>
+    <string name="sortby">Sort by :</string>
+    <string name="status">Status:</string>
+    <string name="point">Point:</string>
+    <string name="sort_az">A-Z</string>
+    <string name="sort_itemAZ">Item A-Z</string>
+    <string name="sort_distance">Distance</string>
+    <string name="sort_amount">Amount</string>
+    <string name="sort_date">Date</string>
+    <string name="sort_number">Number</string>
+    <string name="comming_soon">Coming Soon...</string>
+    <string name="common_error">Feature will be added soon.</string>
+    <string name="sort_status">Status</string>
+    <string name="choose">Choose</string>
+    <string name="new_contact">Add New Contact</string>
+    <string name="search_no_result">There is no restaurant found.</string>
+    <string name="search_profile_no_result">There is no criteria created for search profile.</string>
+    <string name="myorder_title">MyOrders</string>
+    <string name="delete_item">Are you sure you want to delete this item?</string>
+    <string name="my_order_cancel">Are you sure you want to cancel?</string>
+    <string name="delete_message">Are you sure you want to delete this message?</string>
+    <string name="my_order_pay_title">Are you sure you want to pay?</string>
+    <string name="my_order_no_item_pay">There is no item to pay?</string>
+     <string name="delete_item_order">The ordered item can not been deleted.</string>
+
+    <!-- Error for Voice Recognition -->
+    <string name="audioError">Audio Error</string>
+    <string name="clientError">Client Error</string>
+    <string name="networkError">Network Error</string>
+    <string name="serverError">Server Error</string>
+    <string name="noMatch">No Match</string>
+
+    <!-- For the purpose of Testing -->
+    <string name="restaurantNameTest">PizzaHut</string>
+    <string name="dateTest">09/18/2013</string>
+    <string name="pointTest">500 points</string>
+    <string name="numberTest"> 500</string>
+    <string name="addressTest">1234 Ave C.</string>
+    <string name="stateTest">Austin, Texas 78741</string>
+    <string name="menuItemTest">Rated Ribs</string>
+    <string name="nameTest">Ryan</string>
+    <string name="statusTest">Silver</string>
+    <string name="phoneTest">0543530959</string>
+    <string name="emailTest">nguyenxuanquocbao@gmail.com</string>
+    <string name="confirmationTest">Do you want to share 200 points to baocatsamac_@yahoo.com ?</string>
+
+    <!-- MapView -->
+    <string name="activity_map_resTitle">Restaurants</string>
+    <string name="close">Close</string>
+    <string name="activity_map_tvMysearch">My search</string>
+    <string name="activity_map_viewstring">View:</string>
+    <string name="activity_map_close">Close</string>
+    <string name="activity_map_sortby">Sort by :</string>
+    <string name="activity_map_hint">Search(menu items, addy, city/zip, name, ethnicity)</string>
+    <string name="activity_map_locate_error">Can not locate the current location</string>
+    <string name="activity_map_btn_map">Map</string>
+    <string name="activity_map_btn_list">List</string>
+    <string name="activity_map_mess_confirm_gps">Your GPS is disabled. Do you want to enable it?</string>
+
+    <!-- Advanced Search -->
+    <string name="activity_advanced_search_tv_title">MySearch</string>
+    <string name="activity_advanced_search_bt_savedProfile">MySearch Profile Saved.</string>
+    <string name="activity_advanced_search_edt_items">Enter Menu Items/Ingredients/Tag Keywords <i>(e.g. Salmon Sushi, No Onion, Vegan, Gluten-Free, Cheeseburger, Apple Martini, etc.)</i></string>
+    <string name="activity_advanced_search_btSavedProfe">MySearch Profile Saved.</string>
+    <string name="activity_advanced_search_tv_money">Avg.Menu Item $</string>
+    <string name="activity_advanced_search_tv_menuType">Published Menu Types.</string>
+    <string name="activity_advanced_search_multipleSelected">Multiple Selected.</string>
+    <string name="activity_advanced_search_tv_rewardPoint">MyRewards Points Offered</string>
+    <string name="activity_advanced_search_tv_myFavoriteShow">MyFavorites show on top</string>
+    <string name="activity_advanced_search_tv_restaurantRating">Restaurant Ratings</string>
+    <string name="activity_advanced_search_restaurantStyle">Restaurant Style/Ethnicity</string>
+    <string name="activity_advanced_search_tv_serverRating">Server Ratings</string>
+    <string name="activity_advanced_search_tv_maxDistance">Max Search Distance</string>
+    <string name="activity_advanced_search_bt_saveProfile">Save MySearch Profile</string>
+    <!-- MySearch Dialog -->
+    <string name="dialog_advanced_search_tv_title">Create MySearch Profile</string>
+    <string name="dialog_advanced_search_edt_items">Enter Menu Items/Ingredients/Tag Keywords <i>(e.g. Salmon Sushi, No Onion, Vegan, Gluten-Free, Cheeseburger, Apple Martini, etc.)</i></string>
+    <string name="dialog_advanced_search_btSavedProfe">MySearch Profile Saved</string>
+    <string name="dialog_advanced_search_tv_money">Menu Item Price</string>
+    <string name="dialog_advanced_search_tv_menuItemRating">Menu Item Rating</string>
+    <string name="dialog_advanced_search_multipleSelected">Published Menu Types</string>
+    <string name="dialog_advanced_search_tv_rewardPoint">Points Offered</string>
+    <string name="dialog_advanced_search_tv_myFavoriteShow">MyFavorites show on top</string>
+    <string name="dialog_advanced_search_tv_restaurantRating">Restaurant Rating</string>
+    <string name="dialog_advanced_search_restaurantStyle">Genre(Food Type)</string>
+    <string name="dialog_advanced_search_tv_serverRating">Server Rating</string>
+    <string name="dialog_advanced_search_tv_maxDistance">Distance from current location</string>
+    <string name="dialog_advanced_search_bt_saveProfile">Save MySearch Profile</string>
+    <string name="dialog_advanced_search_delete_confirm">Are you sure you want to delete this profile?</string>
+    <string name="dialog_advanced_search_delete_default_confirm">Are you sure you want to delete this default profile?</string>
+
+    <!-- MySearch View -->
+    <string name="activity_mysearch_savedProfile">Saved Profile</string>
+    <string name="activity_mysearch_createProfile">Create Profile</string>
+    <!-- MyPoint View for restaurant in global -->
+    <string name="activity_mypoint_restaurant_title">MyPoints</string>
+    <string name="mypoint">MyPoints</string>
+
+    <!-- MyPoint Transaction -->
+    <string name="activity_mypoint_transaction_totalPoint">Total Points:</string>
+
+    <!-- MyPoint Share -->
+    <string name="activity_mypoint_share_tv_transferPoint">Transfer Points</string>
+    <string name="activity_mypoint_share_btn_sms">SMS</string>
+    <string name="activity_mypoint_share_btn_email">EMAIL</string>
+    <string name="activity_mypoint_share_hint_point">0</string>
+    <string name="activity_mypoint_share_hint_phone">Phone Number*</string>
+    <string name="activity_mypoint_share_hint_email">Email Address*</string>
+    <string name="activity_mypoint_share_mess_input_phone">Phone number is required.</string>
+    <string name="activity_mypoint_share_mess_input_email">Email address is required.</string>
+    <string name="activity_mypoint_share_mess_point_over">Shared point must be lower than total point.</string>
+    <string name="activity_mypoint_share_mess_input_point">Please input point to share.</string>
+    <string name="activity_mypoint_share_mess_sms_success">SMS Sent.</string>
+    <string name="activity_mypoint_share_mess_sms_failed">SMS failed, please try again later.</string>
+    <string name="activity_mypoint_share_mess_sms_no_sim">No SIM, please insert SIM card.</string>
+    <string name="activity_mypoint_share_sharepoint">Shared point successfully.</string>
+
+    <!-- My Order Global History -->
+    <string name="activity_myorder_global_title">MyOrders</string>
+
+    <!-- My Order Details Screen -->
+    <string name="activity_myorder_details_tv_store">Store #</string>
+    <string name="activity_myorder_details_tv_receipt">Receipt #</string>
+    <string name="activity_myorder_details_tv_time">Time:</string>
+    <string name="activity_myorder_details_tv_date">Date:</string>
+    <string name="activity_myorder_details_tv_subtotal">Subtotal</string>
+    <string name="activity_myorder_details_tv_tax">Tax</string>
+    <string name="activity_myorder_details_tv_tip">Tip</string>
+    <string name="activity_myorder_details_tv_total">Total</string>
+    <string name="activity_myorder_details_tv_use_points">Use Points</string>
+
+    <!-- My Order Details Share -->
+    <string name="activity_myorder_share_email_confirm">Are you sure you want to share this order detail via email?</string>
+    <string name="activity_myorder_share_sms_confirm">Are you sure you want to share this order detail via sms?</string>
+    <string name="activity_myorder_share_mess_sms_success">This order is shared successfully.</string>
+    <string name="activity_myorder_share_mess_sms_failed">SMS failed, please try again later.</string>
+    <string name="activity_myorder_share_email_title">Share Order Details Via Email</string>
+    <string name="activity_myorder_share_sms_title">Share Order Details Via SMS</string>
+    <string name="activity_myorder_share_email_subject">Order Detail Info</string>
+    <string name="activity_myorder_share_email_choose">Choose an Email client :</string>
+
+    <!-- My Order Activity -->
+    <string name="activity_myorder_share_server_confirm">There is no server to share.</string>
+    <string name="activity_myorder_choose_server_confirm">There is no server to choose.</string>
+    <string name="activity_myorder_add_favourite_confirm">There is no server to add favourite.</string>
+    <string name="activity_myorder_rate_server_confirm">There is no server to rate.</string>
+    <string name="activity_myorder_rate_server_seekbar_title">Server Rating</string>
+    <!-- MySearch function in RestaurantDetails -->
+    <string name="dialog_custom_menu_restaurant_menuitem">Menu Item $</string>
+    <string name="dialog_custom_menu_restaurant_menucategories">Menu Categories</string>
+    <!-- Dialog Save Profile -->
+    <string name="dialog_save_profile_title">MySearch Profile Name</string>
+    <string name="dialog_save_profile_hint">MySearch Name</string>
+    <string name="dialog_save_profile_invalidate_distance">Distance must be greater than 0.</string>
+    <string name="dialog_save_profile_invalidate_blank_name">Please enter my search name.</string>
+    <string name="dialog_save_profile_invalidate_exist_name">MySearch Profile Name is already existing.</string>
+
+    <!-- Dialog Profile -->
+    <string name="dialog_profile_add">Add New Profile</string>
+    <string name="dialog_profile_title">Saved MySearch</string>
+    <!-- Dialog Menu Type -->
+    <string name="dialog_menu_type_title">Menu Type</string>
+    <string name="dialog_menu_type_breakfast">Breakfast</string>
+    <string name="dialog_menu_type_lunch">Lunch</string>
+    <string name="dialog_menu_type_dinner">Dinner</string>
+    <string name="dialog_menu_type_happyhour">Happy Hour</string>
+    <string name="dialog_menu_type_save_confirm">Are you sure you want to save these options?</string>
+    <!-- Dialog Restaurant Style -->
+    <string name="dialog_restaurant_style_title">Food Type</string>
+    <string name="dialog_restaurant_style_american">American</string>
+    <string name="dialog_restaurant_style_african">African</string>
+    <string name="dialog_restaurant_style_asian">Asian</string>
+    <string name="dialog_restaurant_style_caribbean">Caribbean</string>
+    <string name="dialog_restaurant_style_french">French</string>
+    <string name="dialog_restaurant_style_indian">Indian</string>
+    <string name="dialog_restaurant_style_italian">Italian</string>
+    <string name="dialog_restaurant_style_vietnamese">Vietnamese</string>
+    <string name="dialog_restaurant_style_indonesian">Indonesian</string>
+    <string name="dialog_restaurant_style_thai">Thai</string>
+    <string name="dialog_restaurant_style_save_confirm">Are you sure you want to save these options?</string>
+
+    <!-- Dialog Menu Categories -->
+    <string name="dialog_menu_categories_title">Menu Categories</string>
+    <string name="dialog_menu_categories_appetizers">Appetizers</string>
+    <string name="dialog_menu_categories_drinks">Drinks</string>
+    <string name="dialog_menu_categories_salads">Salads</string>
+    <string name="dialog_menu_categories_sandwiches">Sandwiches</string>
+    <string name="dialog_menu_categories_dessert">Dessert</string>
+    <string name="dialog_menu_categories_specials">Specials</string>
+    <string name="dialog_menu_categories_maindishes">Main Dishes</string>
+
+    <!-- Dialog Search Normal -->
+    <string name="dialog_search_normal_hint">Keyword Search</string>
+    <string name="dialog_search_normal_text"><u>Run Default Search Profile</u></string>
+    <string name="dialog_search_normal_or"><u>or</u></string>
+    <string name="dialog_search_normal_create_new_profile_confirm">There is no criteria created for search profile. Please create a new one before using this function.</string>
+
+    <!-- Expandable ListView -->
+    <string name="activity_expandable_status">Status:</string>
+    <string name="activity_expandable_point">Point:</string>
+
+    <!-- Login -->
+    <string name="login_error_username">Username or Email are invalid.</string>
+    <string name="login_error_password">Password is invalid.</string>
+    <string name="login_error_email">Email is invalid.</string>
+    <string name="login_forgot_password">Forgot MyMenu Password</string>
+    <string name="login_forgot_password_hint_input_email">Enter your email</string>
+    <string name="login_error">Login Error.</string>
+    <string name="login_type">Sign in with:</string>
+    <string name="login_hint_username">Username or Email</string>
+    <string name="login_hint_pass">Password</string>
+    <string name="login_forgot">Forgot Password?</string>
+    <string name="login_submit">Submit</string>
+    <string name="login_create_account">Create a New Account</string>
+    <string name="login_autologin">Keep me signed in</string>
+    <string name="login_or">OR</string>
+    <string name="login_google_error">Sign in with Google Error.</string>
+    <!-- Profile -->
+    <string name="profile_avatar">Avatar</string>
+    <string name="edit_profile_title">Edit Personal Information</string>
+    <string name="profile_dialog_confirm">Do you want to cancel?</string>
+    <string name="profile_logo">Logo</string>
+    <string name="profile_first_name">First Name*</string>
+    <string name="profile_last_name">Last Name*</string>
+    <string name="profile_email_adress">Email Address*</string>
+    <string name="profile_user_name">Username*</string>
+    <string name="profile_zip">Zip Code</string>
+    <string name="profile_password">Password*</string>
+    <string name="profile_confirm_password">Confirm Password*</string>
+    <string name="profile_new_password">New Password*</string>
+    <string name="message_create_account_success">Created Account Successfully.</string>
+    <string name="message_update_account_success">Account information is updated successfully.</string>
+    <string name="message_change_password_successfully">Change Password Successfully.</string>
+    <string name="message_error_first_name_blank">First Name is required.</string>
+    <string name="message_error_first_name">First Name is invalid.</string>
+    <string name="message_error_last_name_blank">Last Name is required.</string>
+    <string name="message_error_last_name">Last Name is invalid.</string>
+    <string name="message_error_email">Email Address is invalid.</string>
+    <string name="message_error_email_blank">Email Address is required.</string>
+    <string name="message_error_email_existed">Email Address Already In Use.</string>
+    <string name="message_error_zip_blank">Zip Code is required.</string>
+    <string name="message_error_zip">Zip Code is invalid.</string>
+    <string name="message_error_password_blank">Password is required.</string>
+    <string name="message_error_password">Passwords must be 5 characters and less than 50 characters.</string>
+    <string name="message_error_password_invalid">Invalid Password</string>
+    <string name="message_error_confirm_password">Password doesn\'t match confirmation.</string>
+    <string name="message_error_confirm_password_blank">Confirm password is required.</string>
+    <string name="message_error_user_name_existed">Username Already In Use.</string>
+    <string name="message_error_user_name_blank">Username is required.</string>
+    <string name="message_error_user_name_invalid">Username is invalid.</string>
+    <string name="message_error_user_name">Username must be 3 characters and less than 30 characters.</string>
+    <string name="account_setting_edit_info">Edit Info</string>
+    <string name="account_setting_log_out">Logout</string>
+    <string name="account_setting_message_error_log_out">Are you sure you want to log out?</string>
+	<string name="profile_terms">Terms \u0026 Conditions Aqureement</string>
+	<string name="profile_online">Online Privacy Pollcy</string>
+
+    <!-- Restaurant Details -->
+    <string name="menu_settings">Setting</string>
+    <string name="details_restaurant_logo">Logo</string>
+    <string name="details_restaurant_menu">Menu</string>
+    <string name="details_restaurant_phone">Phone:</string>
+    <string name="details_restaurant_bio">Bio</string>
+    <string name="details_restaurant_am">am</string>
+    <string name="details_restaurant_am">pm</string>
+    <string name="details_restaurant_my_rate">Rate</string>
+    <string name="details_restaurant_my_favorite">Favorite</string>
+    <string name="details_restaurant_my_share">Share</string>
+    <string name="details_restaurant_my_order">Order</string>
+    <string name="details_restaurant_my_pay">Pay</string>
+    <string name="details_restaurant_search">My Search</string>
+    <string name="details_restaurant_start_over">Start Over</string>
+    <string name="details_restaurant_really_call">Are you sure to call?</string>
+    <string name="details_restaurant_title_bio">Restaurant Bio</string>
+    <string name="details_restaurant_mess_wrong_comment">This is not your rating.</string>
+
+    <!-- Dialog Custom menu -->
+    <string name="dialog_custom_menu_restaurant_search">Menu Search</string>
+    <string name="dialog_custom_menu_restaurant_home">Home</string>
+    <string name="dialog_custom_menu_err_search">Please enter keywords to search.</string>
+
+    <!-- Menu item -->
+    <string name="menuitem_category">Category</string>
+    <string name="menuitem_rate_score">RateScore</string>
+    <string name="menuitem_lb_review">Reviews</string>
+    <string name="menuitem_lb_calories">Calories:</string>
+    <string name="menuitem_lb_point">Points:</string>
+    <string name="custom_seebar_hint">(optional) leave a comment?</string>
+    <string name="custom_seebar_cancel">Cancel</string>
+    <string name="custom_seebar_save">Submit</string>
+    <string name="button_post_it">Post it</string>
+    <string name="custom_seebar_rate_tittle_restaurant"><u>Restaurant Rating</u></string>
+    <string name="custom_seebar_rate_tittle_menuitem"><u>Menu Item Rating</u></string>
+    <string name="common_description">This is component</string>
+    <string name="listview_feedback_done">Done</string>
+    <string name="listview_feedback_lb_review">Reviews</string>
+    <string name="listview_feedback_title">Customer Feedback</string>
+    <string name="menuitem_search_item">There is no menu item found.</string>
+
+    <!-- Option Menu -->
+    <string name="menu_item_invite">Invite</string>
+    <string name="menu_item_myaccount">MyAccount</string>
+    <string name="menu_item_logout">Logout</string>
+    <string name="menu_item_nexttime">Next time</string>
+    <string name="menu_item_stats">Stats</string>
+    <string name="menu_item_instructions">Instructions</string>
+    <string name="menu_item_thumbnail">Thumbnail</string>
+    <string name="menu_item_search">Search</string>
+    <string name="menu_item_feedback">Feedback</string>
+
+    <!-- Message common -->
+    <string name="mess_waitting">Processing...</string>
+    <string name="mess_error_network">No Internet connection, please check your network. </string>
+    <string name="mess_error_server">Can not connect to Server.</string>
+    <string name="mess_signup_cancel">Are you sure to cancel creating new account?</string>
+    <string name="mess_error_voice">Voice recognizer not present.</string>
+    <string name="mess_error_audio">Audio Error</string>
+    <string name="mess_error_client">Client Error</string>
+    <string name="mess_error_no_match">No Match</string>
+    <string name="mess_success_update_rating">Update successfully.</string>
+    <string name="mess_error_avatar">Can not upload avatar.</string>
+    <string name="mess_invalid_accesstoken">Session timeout, please login again.</string>
+    <string name="mess_valid_phone_number">Phone number should be 10 digits or more.</string>
+    <string name="mess_valid_phone_number_blank">Phone number is required.</string>
+    <string name="mess_valid_phone_number_exits">Phone Number Already In Use.</string>
+    <string name="mess_valid_email_blank">This contact has no email.</string>
+    <string name="mess_username_already">Username Already In Use.</string>
+    <!-- Thanh Vu My Friends -->
+    <string name="title_detail_my_friend">MyFriends</string>
+    <string name="lb_status_detail_my_friend">Status:</string>
+    <string name="lb_point_detail_my_friend">Points:</string>
+    <string name="mess_logout_error">Logout Error.</string>
+
+    <!-- Thanh Vu My Friends -->
+    <string name="name_detail_my_friend">Username</string>
+    <string name="lb_status_detail_my_friend">Status:</string>
+    <string name="lb_point_detail_my_friend">Points:</string>
+    <string name="point_detail_my_friend">points</string>
+    <string name="send_message_detail_my_friend">Send A Message</string>
+    <string name="share_point_detail_my_friend">Share Points</string>
+    <string name="profile_detail_my_friend">View Profile</string>
+    <string name="title_list_my_friend">MyFriends</string>
+    <string name="invite_list_my_friend">Invite +</string>
+    <string name="address_list_my_friend">address</string>
+    <string name="rating_remove_my_friend">Total Number of Ratings</string>
+    <string name="review_remove_my_friend">Total Points Received from MyFriend</string>
+    <string name="favorite_remove_my_friend">Restaurant Visited</string>
+
+    <!-- My Order -->
+    <string name="my_order_subtotal">Subtotal</string>
+    <string name="my_order_tax">Tax</string>
+    <string name="my_order_tip">Tip</string>
+    <string name="my_order_total">Total</string>
+    <string name="my_order_pay">Pay</string>
+    <string name="my_order_order">Order</string>
+    <string name="my_order_item_quantity">Qty</string>
+    <string name="title_activity_my_order">MyOrderActivity</string>
+    <string name="my_order_store">Store #</string>
+    <string name="my_order_receipt">Receipt #</string>
+    <string name="my_order_time">Time:</string>
+    <string name="my_order_date">Date:</string>
+    <string name="my_order_point">Total redemption points must be less than total points.</string>
+    <string name="my_order_no_order">There is no order for this restaurant.</string>
+    <string name="my_order_update">The order has been updated successfully.</string>
+    <string name="my_order_no_item">There is no item for this order.</string>
+    <string name="my_order_pay_success">The order has been paid successfully.</string>
+
+    <!-- My Account -->
+    <string name="activity_myaccount_mypoint">MyPoints</string>
+    <string name="activity_myaccount_mynotification">MyNotifications</string>
+    <string name="activity_myaccount_mysetting">MySettings</string>
+    <string name="activity_myaccount_mysearch">MySearch</string>
+    <string name="activity_myaccount_myfriend">MyFriends</string>
+    <string name="activity_myaccount_mywallet">MyWallet</string>
+    <string name="activity_myaccount_myfavorites">MyFavorites</string>
+    <string name="activity_myaccount_mycalories">MyCalories</string>
+    <string name="activity_myaccount_myorders">MyOrders</string>
+    <string name="activity_myaccount_tv_status">Status:</string>
+    <string name="activity_myaccount_tv_point">Points:</string>
+
+    <!-- Splash -->
+    <string name="splash_description">Smarter Restaurants &amp; Happier Customers</string>
+    <string name="splash_website">www.mymenu.us</string>
+
+    <!-- Rating Mymenu -->
+    <string name="rating_mymenu_coment">Comments</string>
+    <string name="rating_mymenu_title">Rate MyMenu App</string>
+
+    <!-- Dialog Photo -->
+    <string name="dialog_photo_title">Upload Profile Photo</string>
+    <string name="dialog_photo_take_photo">Take A New Photo</string>
+    <string name="dialog_photo_choose_photo">Choose From Library</string>
+    <string name="dialog_photo_cancel">CANCEL</string>
+
+    <!-- Mypoints -->
+    <string name="share_my_point_title">MyPoints</string>
+    <string name="share_my_point_total_points">Total Points Sharing</string>
+    <string name="share_my_point_choose_friend">Choose Friend</string>
+    <string name="share_my_point_most_recent">Most Recent: </string>
+    <string name="mess_logout">Are you sure you want to log out?</string>
+    <string name="mess_input_username">Username is required.</string>
+    <string name="mess_input_username_email">Username or Email are required.</string>
+    <string name="mess_input_password">Password is required.</string>
+    <string name="mess_input_email">Email is required.</string>
+    <string name="mess_forgot_error">System cannot send password to your email. Please try again.</string>
+    <string name="mess_forgot_susscess">The reset password instruction has been sent to your email.</string>
+    <string name="mess_register_error">Register failed.</string>
+
+    <!-- Invite Friend -->
+    <string name="invite_friend_title">Invite+ to MyMenu</string>
+    <string name="invite_social">Your post has been shared.</string>
+    <string name="invite_error">Post Error.</string>
+    <string name="invite_social_error">Invite Error.</string>
+    <string name="invite_choose_social">Please select social type.</string>
+    <string name="common_mess_save_success">Saved Successfully.</string>
+    <string name="common_mess_delete_success">Deleted Successfully.</string>
+    <string name="common_mess_delete_error">Deleted Error.</string>
+    <string name="common_mess_save_error">Save Error.</string>
+    <string name="common_mess_setdefault_error">Set Default Error.</string>
+    <string name="common_mess_setdefault_success">Set Default Successfully.</string>
+    <string name="common_mess_add_favourite_error">Add Favourite Error.</string>
+
+    <!-- Share Location -->
+    <string name="sharelocation_restaurant_title">Share Restaurant</string>
+    <string name="sharelocation_menu_item_title">Share Menu Item</string>
+    <string name="sharelocation_hint_to">To:</string>
+    <string name="sharelocation_hint_comment">Comment...</string>
+    <string name="sharelocation_server_title">Server Restaurant</string>
+    <string name="sharelocation_phone_required">Phone number is required.</string>
+    <string name="sharelocation_email_required">Email address is required.</string>
+    <string name="sharelocation_email_choose">Choose an Email client :</string>
+    <string name="sharelocation_post_shared">Your post has been shared.</string>
+    <string name="sharelocation_post_shared_error">Post Error.</string>
+
+    <!-- Dialog change password -->
+    <string name="dialog_change_password_title">Change Password</string>
+
+    <!-- Dialog myfeedback -->
+    <string name="dialog_my_feedback_mess_success">Your feedback has been sent successfully.</string>
+
+    <!-- commmon hint text search -->
+    <string name="common_hint_search">Search</string>
+
+    <!-- commmon my favorites -->
+    <string name="common_my_favorites">My Favorites</string>
+
+    <!-- commmon lable amount -->
+    <string name="common_lb_amount">Amount</string>
+
+    <!-- commmon lable restaurants -->
+    <string name="common_lb_restaurants">Restaurant</string>
+    <!-- commmon lable item A - Z -->
+    <string name="common_lb_item_az">Item A - Z</string>
+
+    <!-- commmon lable rating -->
+    <string name="common_lb_sort_rating">Rating</string>
+
+    <!-- commmon lable new -->
+    <string name="common_lb_new">New</string>
+
+    <!-- commmon lable notifications -->
+    <string name="common_lb_notification">Notifications</string>
+
+    <!-- commmon lable my instructions -->
+    <string name="common_lb_my_instructions">My Instructions</string>
+
+    <!-- commmon lable my notification -->
+    <string name="common_my_notification">My Notifications</string>
+
+    <!-- Invite friend -->
+    <string name="invite_friend_sucess">Invited friends successfully.</string>
+    <string name="mess_error_validated">Please input your comments !</string>
+    <string name="mess_error_validate_accept_point">Please click Accept before submit</string>
+    <string name="dialog_menuitem_quanity_title"><u>Order Quantity</u></string>
+    <string name="menu_item_title_bio">Description</string>
+
+</resources>

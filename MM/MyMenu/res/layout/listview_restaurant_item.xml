@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listview_selector"
+    android:gravity="center_vertical"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/listview_restaurant_item_logo"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/listview_restaurant_item_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/White"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/listview_restaurant_item_distance"
+        android:layout_toRightOf="@id/listview_restaurant_item_logo" >
+
+        <TextView
+            android:id="@+id/listview_restaurant_item_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/listview_restaurant_item_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="A+"
+            android:textColor="@color/Gray"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

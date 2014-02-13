@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="40dp"
+    android:background="@color/bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+     >
+    
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_menuitem_quanity_title"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/White"
+        />
+    
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/comment_bg_dark"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/dialog_menuitem_order_et_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/White"
+            android:gravity="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/Black" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dialog_menuitem_order_bt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_cancel"
+            android:text="@string/custom_seebar_cancel"
+            android:textColor="@color/White"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/dialog_menuitem_order_bt_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_submit"
+            android:text="@string/custom_seebar_save"
+            android:textColor="@color/White"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

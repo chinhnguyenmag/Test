@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/activity_map_rel_search"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/activity_map_linear_advanced"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/activity_map_imbt_advanced"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_advanced_search"
+                    android:onClick="onClick_AdvancedSearch" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/activity_map_imbt_speak"
+                android:layout_toRightOf="@+id/activity_map_linear_advanced" >
+
+                <TextView
+                    android:id="@+id/activity_map_edt_search"
+                    style="@style/editText_custom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:drawableLeft="@android:drawable/ic_search_category_default"
+                    android:gravity="center_vertical"
+                    android:hint="@string/activity_map_hint"
+                    android:singleLine="true" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/activity_map_imbt_speak"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@android:drawable/ic_btn_speak_now"
+                android:onClick="onClick_SpeakRegconition"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#333333"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/activity_map_imbt_mapView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ic_tab_selected"
+                android:onClick="onClick_ChangeToMapView"
+                android:text="@string/activity_map_btn_map"
+                android:textColor="@color/White"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:background="@color/Gray" />
+
+            <Button
+                android:id="@+id/activity_map_imbt_listView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ic_tab_unselected"
+                android:onClick="onClick_ChangeToListView"
+                android:text="@string/activity_map_btn_list"
+                android:textColor="@color/White"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Layout for MapView -->
+
+        <RelativeLayout
+            android:id="@+id/activity_map_mapview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <fragment
+                android:id="@+id/activity_map_map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/activity_map_layout_gallery"
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/activity_map_layout_arrowLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:onClick="onClick_imbtLeftArrow"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" >
+
+                    <ImageButton
+                        android:id="@+id/activity_map_iv_leftArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/ic_arrow_left_active" />
+                </LinearLayout>
+
+                <com.magrabbit.intelligentmenu.adapter.HorizontalListView
+                    android:id="@+id/activity_map_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/activity_map_layout_arrowRight"
+                    android:layout_toRightOf="@+id/activity_map_layout_arrowLeft" />
+
+                <LinearLayout
+                    android:id="@+id/activity_map_layout_arrowRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="onClick_imbtRightArrow"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" >
+
+                    <ImageButton
+                        android:id="@+id/activity_map_iv_rightArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/ic_arrow_right_active" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Layout for ListView -->
+
+            <LinearLayout
+                android:id="@+id/activity_map_layout_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/bg" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="@string/activity_map_resTitle"
+                    android:textColor="@color/White"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/bg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#16191a" >
+
+                    <LinearLayout
+                        android:id="@+id/activity_map_layout_az"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:onClick="onClick_sortByAZ"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/sort_az"
+                            android:textColor="@color/White"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/activity_map_imbt_sortAZ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_arrow_down"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/activity_map_layout_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:onClick="onClick_sortByDistance"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/sort_distance"
+                            android:textColor="@color/White"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/activity_map_imbt_sortDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/bg" />
+
+                <ListView
+                    android:id="@+id/activity_map_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg"
+                    android:cacheColorHint="@color/bg"
+                    android:divider="#4a4a4a"
+                    android:dividerHeight="1dp"
+                    android:padding="10dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:id="@+id/optionmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <com.magrabbit.intelligentmenu.customview.OptionMenu
+                android:id="@+id/optionMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

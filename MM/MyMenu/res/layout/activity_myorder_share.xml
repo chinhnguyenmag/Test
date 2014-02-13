@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/activity_myorder_share_iv_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:contentDescription="@string/common_description"
+                android:src="@drawable/ic_myorder_logo" />
+
+            <TextView
+                android:id="@+id/activity_myorder_share_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/myorder_title"
+                android:textColor="@color/White"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/activity_myorder_share_bt_sms"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_mypoint_share_sms"
+                android:textColor="@color/White" />
+
+            <TextView
+                android:id="@+id/activity_myorder_share_tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/activity_myorder_share_cbx_SMS"
+                android:layout_toRightOf="@+id/activity_myorder_share_bt_sms"
+                android:background="@drawable/edittext_selector"
+                android:clickable="true"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/activity_mypoint_share_hint_phone"
+                android:onClick="onClick_LoadPhone"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/activity_myorder_share_cbx_SMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp" >
+
+            <Button
+                android:id="@+id/activity_myorder_share_bt_email"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_mypoint_share_email"
+                android:textColor="@color/White" />
+
+            <TextView
+                android:id="@+id/activity_myorder_share_tv_email"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/activity_myorder_share_cbx_Email"
+                android:layout_toRightOf="@+id/activity_myorder_share_bt_email"
+                android:background="@drawable/edittext_selector"
+                android:clickable="true"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/activity_mypoint_share_hint_email"
+                android:onClick="onClick_LoadEmail"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/activity_myorder_share_cbx_Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="false" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_myorder_share_layout_button"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp" >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_cancel"
+                android:onClick="onClick_Cancel"
+                android:text="@string/cancel"
+                android:textColor="@color/White"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_submit"
+                android:onClick="onClick_Share"
+                android:text="@string/share"
+                android:textColor="@color/White"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:id="@+id/optionmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <com.magrabbit.intelligentmenu.customview.OptionMenu
+                android:id="@+id/optionMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
