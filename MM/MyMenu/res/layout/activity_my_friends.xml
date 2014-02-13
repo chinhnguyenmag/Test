@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comment_bg_light" >
+
+    <RelativeLayout
+        android:id="@+id/my_friend_list_re_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/comment_bg_light"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <Button
+            android:id="@+id/my_friend_list_bt_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/myfriend_button_invite"
+            android:onClick="onClick_Invite"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/invite_list_my_friend"
+            android:textColor="@color/White"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/my_friend_list_iv_ic_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/common_description"
+            android:src="@drawable/ic_myfriend_logo" />
+
+        <TextView
+            android:id="@+id/my_friend_list_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/my_friend_list_iv_ic_title"
+            android:text="@string/title_list_my_friend"
+            android:textColor="@color/White"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_friend_list_re_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_friend_list_re_title"
+        android:layout_marginTop="20dp" >
+
+        <EditText
+            android:id="@+id/my_friend_list_et_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:drawableLeft="@drawable/ic_myfriend_lb_search"
+            android:hint="@string/common_hint_search"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="@color/Black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_friend_list_re_sort"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_friend_list_re_search"
+        android:layout_marginTop="5dp"
+        android:background="@color/comment_bg_dark"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/my_friend_list_tv_lb_sortby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/sortby"
+            android:textColor="@color/White"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/my_friend_list_tv_sortaz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/my_friend_list_tv_lb_sortby"
+            android:text="@string/sort_az"
+            android:textColor="@color/White"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/my_friend_list_iv_lb_sortaz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:visibility="invisible"
+            android:layout_toRightOf="@id/my_friend_list_tv_sortaz"
+            android:background="@drawable/ic_arrow_down"
+            android:contentDescription="@string/common_description"/>
+
+        <ImageView
+            android:id="@+id/my_friend_list_iv_lb_sort_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_arrow_down"
+            android:contentDescription="@string/common_description"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/my_friend_list_tv_sort_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/my_friend_list_iv_lb_sort_status"
+            android:text="@string/sort_status"
+            android:textColor="@color/White"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/my_friend_list_iv_lb_sort_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/my_friend_list_tv_sort_status"
+            android:background="@drawable/ic_arrow_down"
+            android:contentDescription="@string/common_description"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/my_friend_list_tv_sort_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/my_friend_list_iv_lb_sort_date"
+            android:text="@string/sort_date"
+            android:textColor="@color/White"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_friend_list_re_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/my_friend_list_re_sort"
+        android:layout_marginTop="20dp" >
+
+        <ListView
+            android:id="@+id/my_friend_list_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/comment_bg_light"
+            android:cacheColorHint="@color/comment_bg_light"
+            android:divider="@color/comment_color_list_deliver"
+            android:dividerHeight="1dp"
+            android:padding="5dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:id="@+id/optionmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <com.magrabbit.intelligentmenu.customview.OptionMenu
+                android:id="@+id/optionMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

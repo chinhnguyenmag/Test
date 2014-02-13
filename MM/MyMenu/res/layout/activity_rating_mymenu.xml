@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/Black"
+    android:gravity="center_horizontal" >
+
+    <TextView
+        android:id="@+id/rating_mymenu_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/rating_mymenu_title"
+        android:textColor="@color/White"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/profile_iv_logo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:contentDescription="@string/profile_logo"
+        android:src="@drawable/ic_logo_login" />
+
+    <LinearLayout
+        android:id="@+id/seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/rating_mymenu_tv_value_rate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/White"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/rating_mymenu_seek_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:indeterminate="false"
+            android:max="12"
+            android:maxHeight="12dp"
+            android:minHeight="9dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:thumb="@drawable/ic_restaurant_details_favorite_focus" />
+
+        <EditText
+            android:id="@+id/rating_mymenu_et_comment"
+            style="@style/editText_custom"
+            android:layout_width="286dp"
+            android:layout_height="93dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:gravity="top|left"
+            android:hint="@string/rating_mymenu_coment"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:scrollHorizontally="false"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/rating_mymenu_bt_cancel"
+        style="@style/custom_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="onClick_Cancel"
+        android:text="@string/cancel"
+        android:textColor="@color/White"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/rating_mymenu_bt_submit"
+        style="@style/custom_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="14dp"
+        android:onClick="onClick_Submit"
+        android:text="@string/submit"
+        android:textColor="@color/White"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/rating_mymenu_iv_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:contentDescription="@string/common_description"
+        android:src="@drawable/dialog_ic_star" />
+
+</RelativeLayout>

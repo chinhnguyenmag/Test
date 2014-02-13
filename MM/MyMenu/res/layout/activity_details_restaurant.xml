@@ -1,0 +1,325 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/details_restaurant_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp" >
+
+            <Button
+                android:id="@+id/details_restaurant_bt_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_btn_menu_restaurant"
+                android:onClick="onClick_Menu" />
+
+            <ImageView
+                android:id="@+id/details_restaurant_iv_logo"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/details_restaurant_logo" />
+
+            <TextView
+                android:id="@+id/details_restaurant_tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick_Feedback"
+                android:textColor="@color/White"
+                android:textSize="@dimen/rate_text_large"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/details_restaurant_iv_img_default"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_load_img_500"
+                android:contentDescription="@string/details_restaurant_logo" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_my_order_viewpager_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/details_restaurant_slider_top"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bg_slider"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <Button
+                    android:id="@+id/details_restaurant_bt_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_restaurant_details_favorite"
+                    android:onClick="onClick_Favorite" />
+
+                <Button
+                    android:id="@+id/details_restaurant_bt_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_restaurant_details_rate"
+                    android:onClick="onClick_Rating" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_slider"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <Button
+                    android:id="@+id/details_restaurant_bt_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/button_restaurant_details_share"
+                    android:onClick="onClick_Share" />
+
+                <!-- <com.viewpagerindicator.CirclePageIndicator -->
+                <!-- android:id="@+id/details_restaurant_indicator" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_centerHorizontal="true" -->
+                <!-- android:padding="10dp" /> -->
+
+                <com.viewpagerindicator.LinePageIndicator
+                    android:id="@+id/details_restaurant_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    app:lineWidth="10dp"
+                    app:selectedColor="#bab134"
+                    app:strokeWidth="10dp"
+                    app:unselectedColor="#666666" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/details_restaurant_sv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:background="@drawable/bg_res_info"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="visible" >
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp" >
+
+                    <LinearLayout
+                        android:id="@+id/details_restaurant_ll_name_bio"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/details_restaurant_tv_name_restaurant"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/White"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/details_restaurant_phone"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/White"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_restaurant_tv_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:clickable="true"
+                            android:onClick="onClick_Call"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/White"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line"
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/details_restaurant_ll_name_bio"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/line_bottom"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/details_restaurant_tv_address_restaurant"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line"
+                        android:layout_marginTop="5dp"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick_Address"
+                        android:textColor="@color/White"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/details_restaurant_tv_website_restaurant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/details_restaurant_tv_address_restaurant"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:autoLink="web"
+                        android:textColor="@color/White"
+                        android:textColorLink="@color/White"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/details_restaurant_ll_phone_open_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@id/details_restaurant_tv_website_restaurant"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/details_restaurant_tv_bio_click"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:gravity="center_horizontal"
+                            android:onClick="onClick_BioInfo"
+                            android:text="@string/details_restaurant_bio"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/White" />
+
+                        <TextView
+                            android:id="@+id/details_restaurant_tv_open_hours"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_toLeftOf="@id/details_restaurant_tv_bio_click"
+                            android:textColor="@color/White"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/details_restaurant_sv_bio"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_res_info"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/details_restaurant_tv_title_bio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/details_restaurant_title_bio"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/White" />
+
+            <Button
+                android:id="@+id/details_restaurant_bt_close_bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_close_bio"
+                android:onClick="onClick_BioInfo" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <RelativeLayout
+                android:id="@+id/details_restaurant_rl_bio"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/details_restaurant_tv_bio"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/White" />
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:id="@+id/optionmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <com.magrabbit.intelligentmenu.customview.OptionMenu
+                android:id="@+id/optionMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/photo_border"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:id="@+id/dialog_custom_menu_restaurant_ll_start_over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/dialog_custom_menu_restaurant_ib_start_over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_startover"
+                    android:contentDescription="@string/details_restaurant_my_order" />
+
+                <TextView
+                    android:id="@+id/dialog_custom_menu_restaurant_lb_start_over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/details_restaurant_start_over"
+                    android:textColor="@color/White"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialog_custom_menu_restaurant_ll_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/dialog_custom_menu_restaurant_ib_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_order"
+                    android:contentDescription="@string/details_restaurant_search" />
+
+                <TextView
+                    android:id="@+id/dialog_custom_menu_restaurant_lb_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/details_restaurant_my_order"
+                    android:textColor="@color/White"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialog_custom_menu_restaurant_ll_ib_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/dialog_custom_menu_restaurant_ib_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_pay"
+                    android:contentDescription="@string/details_restaurant_my_pay" />
+
+                <TextView
+                    android:id="@+id/dialog_custom_restaurant_lb_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/details_restaurant_my_pay"
+                    android:textColor="@color/White"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialog_custom_menu_restaurant_ll_MySearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/dialog_custom_menu_restaurant_ib_mySearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_search"
+                    android:contentDescription="@string/details_restaurant_search" />
+
+                <TextView
+                    android:id="@+id/dialog_custom_menu_restaurant_lb_next_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/details_restaurant_search"
+                    android:textColor="@color/White"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/dialog_custom_menu_restaurant_rel_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <!--
+                 <com.magrabbit.intelligentmenu.customview.CustomEditText
+                android:id="@+id/dialog_custom_menu_restaurant_edtSearch"
+                style="@style/editText_custom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@android:drawable/ic_search_category_default"
+                android:gravity="center_vertical"
+                android:hint="@string/dialog_custom_menu_restaurant_search"
+                android:singleLine="true" />
+            -->
+
+            <EditText
+                android:id="@+id/dialog_custom_menu_restaurant_edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/dialog_custom_menu_restaurant_ib_Search"
+                android:background="@drawable/edittext_selector"
+                android:hint="@string/dialog_custom_menu_restaurant_search"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <ImageButton
+                android:id="@+id/dialog_custom_menu_restaurant_ib_Speak"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@android:drawable/ic_btn_speak_now"
+                android:onClick="onClick_SpeakRegconition"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/dialog_custom_menu_restaurant_ib_Search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/button_search_menu" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/dialog_custom_menu_restaurant_layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/dialog_custom_menu_restaurant_ll_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dialog_custom_menu_restaurant_home"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/White" />
+
+                <ImageView
+                    android:id="@+id/dialog_custom_menu_restaurant_ib_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#4a4a4a" />
+
+            <ListView
+                android:id="@+id/dialog_custom_menu_restaurant_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/bg"
+                android:cacheColorHint="@color/bg"
+                android:divider="#4a4a4a"
+                android:dividerHeight="1dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
